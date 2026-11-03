@@ -2,6 +2,8 @@ package com.cristofer.gasolineras.controller;
 
 import java.util.List;
 
+import jakarta.validation.Valid;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,12 +32,12 @@ public class GasolineraController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Gasolinera crear(@RequestBody Gasolinera gasolinera) {
+    public Gasolinera crear(@Valid @RequestBody Gasolinera gasolinera) {
         return service.crear(gasolinera);
     }
 
     @PutMapping("/{id}")
-    public Gasolinera actualizar(@PathVariable Long id, @RequestBody Gasolinera datos) {
+    public Gasolinera actualizar(@PathVariable Long id, @Valid @RequestBody Gasolinera datos) {
         return service.actualizar(id, datos);
     }
 
