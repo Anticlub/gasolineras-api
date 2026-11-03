@@ -1,4 +1,4 @@
-package com.cristofer.gasolineras.controler;
+package com.cristofer.gasolineras.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
